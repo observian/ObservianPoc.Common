@@ -18,9 +18,13 @@ jobs:
 #          sed -i "s/1.0.0/${version}/g" ./ObservianPoc.Models/ObservianPoc.Models.csproj
 #          dotnet pack -c Release -o . ./ObservianPoc.Models/ObservianPoc.Models.csproj       
 
+      - name: Build Project
+        run: |
+          dotnet build -c Release
+
       - name: Dotnet Pack
         run: |
-          dotnet pack --no-build -c Release -o .
+          dotnet pack --no-build -c Release -o . ./ObservianPoc.Models/ObservianPoc.Models.csproj
           
       - name: Package Source
         run: |
