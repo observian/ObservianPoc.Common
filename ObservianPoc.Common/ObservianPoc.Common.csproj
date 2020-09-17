@@ -2,12 +2,12 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-        <Title>ObservianPoc.Models</Title>
+        <Title>ObservianPoc.Common</Title>
         <Authors>Observian Member</Authors>
         <Company>Observian</Company>
-        <Version>1.0.0</Version>
-        <PackageVersion>1.0.0</PackageVersion>
+        <Version>1.0.1</Version>
+        <PackageVersion>1.0.1</PackageVersion>
         <RepositoryUrl>https://github.com/observian/ObservianPoc.Common</RepositoryUrl>
     </PropertyGroup>
-
+    
 </Project>
