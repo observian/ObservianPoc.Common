@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObservianPoc.Common", "ObservianPoc.Common\ObservianPoc.Common.csproj", "{AA176B6D-2066-4912-9B9F-C7D5764DD7C5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObservianPoc.Models", "ObservianPoc.Models\ObservianPoc.Models.csproj", "{AA176B6D-2066-4912-9B9F-C7D5764DD7C5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{BD30FD32-F448-4791-BBF6-8BF55898CE8C}"
 ProjectSection(SolutionItems) = preProject

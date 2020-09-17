@@ -5,9 +5,8 @@
         <Title>ObservianPoc.Common</Title>
         <Authors>Observian Member</Authors>
         <Company>Observian</Company>
-        <PackageId>ObservianPoc.Common</PackageId>
-        <Version>1.0.3</Version>
-<!--        <PackageVersion>1.0.1</PackageVersion>-->
+        <PackageId>ObservianPoc.Models</PackageId>
+        <Version>1.0.4</Version>
         <RepositoryUrl>https://github.com/observian/ObservianPoc.Common</RepositoryUrl>
     </PropertyGroup>
     

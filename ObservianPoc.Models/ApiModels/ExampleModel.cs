@@ -1,4 +1,4 @@
-namespace ObservianPoc.Common.ApiModels
+namespace ObservianPoc.Models.ApiModels
 {
     public class ExampleModel
     {

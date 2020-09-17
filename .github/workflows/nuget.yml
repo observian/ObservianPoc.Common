@@ -9,14 +9,8 @@ jobs:
 
       - name: Setup .NET Core Version 3.1
         uses: actions/setup-dotnet@v1
-#        with:
-#          dotnet-version: 3.1.301
-
-#      - name: Dotnet Pack
-#        run: |
-#          version=`date +"%Y.%m%d.%H%M"`
-#          sed -i "s/1.0.0/${version}/g" ./ObservianPoc.Models/ObservianPoc.Models.csproj
-#          dotnet pack -c Release -o . ./ObservianPoc.Models/ObservianPoc.Models.csproj       
+        with:
+          dotnet-version: 3.1.301
 
       - name: Build Project
         run: |
@@ -24,13 +18,14 @@ jobs:
 
       - name: Dotnet Pack
         run: |
-          dotnet pack --no-build -c Release -o . 
-          
+          version=`date +"%Y.%m%d.%H%M"`
+          sed -i "s/1.0.0/${version}/g" ./ObservianPoc.Models/ObservianPoc.Models.csproj
+          dotnet pack -c Release -o . ./ObservianPoc.Models/ObservianPoc.Models.csproj       
+
       - name: Package Source
         run: |
-          dotnet nuget add source ${{ secrets.PACKAGE_SOURCE }} -n github -u ${{ github.actor }} -p ${{ secrets.MY_GITHUB_TOKEN }} --store-password-in-clear-text
+          dotnet nuget add source ${{ secrets.PACKAGE_SOURCE }} -n github -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text
           
       - name: Push to GitHub
         run: |
-          ls
-          dotnet nuget push *.nupkg -s "github" -k ${{ secrets.MY_GITHUB_TOKEN }} --skip-duplicate --no-symbols true
+          dotnet nuget push *.nupkg -s "github" -k ${{ secrets.GITHUB_TOKEN }} --skip-duplicate --no-symbols true
