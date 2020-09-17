@@ -7,10 +7,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Setup .NET Core Version 3.1.301
+      - name: Setup .NET Core Version 3.1
         uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 3.1.301
+#        with:
+#          dotnet-version: 3.1.301
 
 #      - name: Dotnet Pack
 #        run: |
@@ -28,8 +28,9 @@ jobs:
           
       - name: Package Source
         run: |
-          dotnet nuget add source ${{ secrets.PACKAGE_SOURCE }} -n github -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text
+          dotnet nuget add source ${{ secrets.PACKAGE_SOURCE }} -n github -u ${{ github.actor }} -p ${{ secrets.MY_GITHUB_TOKEN }} --store-password-in-clear-text
           
       - name: Push to GitHub
         run: |
-          dotnet nuget push *.nupkg -s "github" -k ${{ secrets.GITHUB_TOKEN }} --skip-duplicate --no-symbols true
+          ls
+          dotnet nuget push *.nupkg -s "github" -k ${{ secrets.MY_GITHUB_TOKEN }} --skip-duplicate --no-symbols true
