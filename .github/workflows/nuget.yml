@@ -24,7 +24,7 @@ jobs:
 
       - name: Dotnet Pack
         run: |
-          dotnet pack --no-build -c Release -o . ./ObservianPoc.Models/ObservianPoc.Models.csproj
+          dotnet pack --no-build -c Release -o . 
           
       - name: Package Source
         run: |
