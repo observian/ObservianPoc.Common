@@ -7,5 +7,6 @@ namespace ObservianPoc.Models.ApiModels
         public string Property2 { get; set; }
 
         public string Property3 { get; set; }
+        
     }
 }
